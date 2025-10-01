@@ -64,7 +64,7 @@ export interface ProjectListProps {
     status?: ProjectStatus;
     search?: string;
   };
-  onFiltersChange?: (filters: any) => void;
+  onFiltersChange?: (filters: Record<string, unknown>) => void;
 }
 
 export interface ProjectCardProps {
@@ -78,7 +78,7 @@ export interface ProjectCardProps {
 export interface ProjectFormProps {
   project?: Project;
   organizationSlug: string;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: Record<string, unknown>) => void;
   onCancel: () => void;
   loading?: boolean;
   error?: string;
@@ -103,7 +103,7 @@ export interface TaskListProps {
     assignee?: string;
     search?: string;
   };
-  onFiltersChange?: (filters: any) => void;
+  onFiltersChange?: (filters: Record<string, unknown>) => void;
   groupBy?: 'status' | 'priority' | 'assignee' | 'none';
 }
 
@@ -123,7 +123,7 @@ export interface TaskFormProps {
   task?: Task;
   projectId: string;
   organizationSlug: string;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: Record<string, unknown>) => void;
   onCancel: () => void;
   loading?: boolean;
   error?: string;
@@ -202,7 +202,7 @@ export interface FormFieldProps {
 }
 
 export interface FormProps {
-  onSubmit: (data: any) => void;
+  onSubmit: (data: Record<string, unknown>) => void;
   loading?: boolean;
   error?: string;
   children: ReactNode;
@@ -211,8 +211,8 @@ export interface FormProps {
 
 // Filter component props
 export interface FilterBarProps {
-  filters: Record<string, any>;
-  onFiltersChange: (filters: Record<string, any>) => void;
+  filters: Record<string, unknown>;
+  onFiltersChange: (filters: Record<string, unknown>) => void;
   onClearFilters: () => void;
   fields: FilterFieldConfig[];
 }
@@ -300,7 +300,7 @@ export interface LoadingSkeletonProps {
 export interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: any) => void;
+  onError?: (error: Error, errorInfo: Record<string, unknown>) => void;
 }
 
 export interface ErrorMessageProps {
@@ -310,17 +310,17 @@ export interface ErrorMessageProps {
 }
 
 // Table component props
-export interface TableColumn<T = any> {
+export interface TableColumn<T = unknown> {
   key: string;
   title: string;
   dataIndex?: keyof T;
-  render?: (value: any, record: T, index: number) => ReactNode;
+  render?: (value: unknown, record: T, index: number) => ReactNode;
   sortable?: boolean;
   width?: string | number;
   align?: 'left' | 'center' | 'right';
 }
 
-export interface TableProps<T = any> {
+export interface TableProps<T = unknown> {
   columns: TableColumn<T>[];
   data: T[];
   loading?: boolean;

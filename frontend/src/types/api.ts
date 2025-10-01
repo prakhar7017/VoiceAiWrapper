@@ -1,7 +1,7 @@
 // GraphQL Query and Mutation types for Apollo Client
 
 // Query Variables
-export type GetOrganizationsVariables = unknown
+export type GetOrganizationsVariables = Record<string, never>
 
 export interface GetOrganizationVariables {
   slug: string;

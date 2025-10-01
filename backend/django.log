@@ -394,3 +394,476 @@ INFO 2025-10-01 15:22:51,534 views 12888 19328 GraphQL request from 127.0.0.1
 INFO 2025-10-01 15:22:51,538 schema 12888 19328 Fetching projects for organization: demo-1
 INFO 2025-10-01 15:22:51,568 basehttp 12888 19328 "POST /graphql/ HTTP/1.1" 200 24
 INFO 2025-10-01 15:40:53,400 autoreload 24920 17332 Watching for file changes with StatReloader
+INFO 2025-10-01 15:40:59,609 views 24920 21012 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:40:59,676 basehttp 24920 21012 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 15:42:32,260 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:42:32,361 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 15:42:34,700 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:42:34,798 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 15:42:41,146 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:42:41,188 schema 24920 25948 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:42:41,201 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:42:52,533 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:42:52,539 schema 24920 25948 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:42:52,575 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:43:24,012 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:43:24,066 schema 24920 25948 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:43:24,085 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:43:54,701 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:43:54,746 schema 24920 25948 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:43:54,764 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:44:25,698 views 24920 25948 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:44:25,731 schema 24920 25948 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:44:25,742 basehttp 24920 25948 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:45:57,005 views 24920 27132 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:45:57,038 schema 24920 27132 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:45:57,048 basehttp 24920 27132 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:46:27,999 views 24920 17644 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:46:28,052 schema 24920 17644 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:46:28,062 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:46:58,996 views 24920 17208 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:46:59,051 schema 24920 17208 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:46:59,062 basehttp 24920 17208 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:47:29,695 views 24920 17208 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:47:29,742 schema 24920 17208 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:47:29,753 basehttp 24920 17208 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:47:44,450 views 24920 17208 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:47:44,452 views 24920 2684 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:47:44,470 schema 24920 2684 Fetching tasks for project: 18
+INFO 2025-10-01 15:47:44,516 basehttp 24920 17208 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:47:44,540 basehttp 24920 2684 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:47:50,583 views 24920 2684 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:47:50,584 views 24920 17208 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:47:50,622 basehttp 24920 17208 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 15:47:50,627 basehttp 24920 2684 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 15:49:17,700 views 24920 2684 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:49:17,727 schema 24920 2684 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:49:17,738 basehttp 24920 2684 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:49:49,017 views 24920 27352 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:49:49,071 schema 24920 27352 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:49:49,081 basehttp 24920 27352 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:50:19,700 views 24920 27352 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:50:19,746 schema 24920 27352 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:50:19,758 basehttp 24920 27352 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:50:47,148 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:50:47,204 schema 24920 22692 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:50:47,221 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:50:48,843 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:50:48,853 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:50:48,861 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 15:50:48,901 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:50:48,913 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:51:03,616 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:03,617 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:03,627 schema 24920 22692 Fetching tasks for project: 18
+INFO 2025-10-01 15:51:03,664 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:51:03,680 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:51:06,651 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:06,652 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:06,662 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 15:51:06,698 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:51:06,722 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:51:16,078 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:16,079 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:16,096 schema 24920 22692 Fetching tasks for project: 18
+INFO 2025-10-01 15:51:16,143 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:51:16,152 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:51:22,477 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:22,478 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:22,496 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 15:51:22,537 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:51:22,565 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:51:24,478 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:51:24,522 schema 24920 28288 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:51:24,535 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:52:06,207 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:52:06,293 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 15:54:44,201 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:54:44,211 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:54:44,285 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 15:54:44,288 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 15:55:32,484 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:55:32,485 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:55:32,494 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 15:55:32,525 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:55:32,526 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:57:14,326 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:57:14,380 schema 24920 28288 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:57:14,407 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:57:20,322 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:57:20,464 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 15:58:32,806 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:58:32,817 views 24920 22692 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:58:32,873 basehttp 24920 22692 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 15:58:32,876 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 16:02:36,693 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:02:36,720 schema 24920 28288 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:02:36,730 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:03:07,691 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:03:07,720 schema 24920 28288 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:03:07,730 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:03:38,237 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:03:38,276 schema 24920 28288 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:03:38,287 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:04:42,482 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:04:42,579 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 16:05:00,008 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:05:00,164 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 16:05:03,601 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:05:03,667 schema 24920 28288 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:05:03,690 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:05:06,405 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:05:06,498 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 16:05:06,504 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:05:06,518 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 16:05:06,587 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 16:07:48,517 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:07:48,612 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 16:07:48,617 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:07:48,629 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 16:07:48,727 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 16:08:08,483 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:08:08,494 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:08:08,580 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 16:08:08,580 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 16:08:42,530 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:08:42,594 schema 24920 27812 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:08:42,617 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:09:12,704 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:12,767 schema 24920 27812 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:09:12,798 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:09:23,160 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:23,239 schema 24920 27812 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:09:23,266 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:09:53,212 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:53,221 schema 24920 27812 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:09:53,295 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 16:09:54,544 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:54,562 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:54,586 schema 24920 28288 Fetching tasks for project: 18
+INFO 2025-10-01 16:09:54,650 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 16:09:54,674 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 16:09:59,911 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:59,920 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:09:59,989 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 16:09:59,998 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 16:10:59,827 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:10:59,971 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 16:14:27,730 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:14:27,823 schema 24920 27812 Fetching projects for organization: demo-organization
+INFO 2025-10-01 16:14:27,849 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 515
+INFO 2025-10-01 16:14:29,420 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:14:29,428 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:14:29,446 schema 24920 28288 Fetching tasks for project: 17
+INFO 2025-10-01 16:14:29,499 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 414
+INFO 2025-10-01 16:14:29,515 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 528
+INFO 2025-10-01 16:14:35,886 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:14:35,887 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:14:35,980 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 525
+INFO 2025-10-01 16:14:35,992 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 304
+INFO 2025-10-01 16:15:37,767 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:15:37,769 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:15:37,841 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 304
+INFO 2025-10-01 16:15:37,862 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 525
+INFO 2025-10-01 16:15:46,185 views 24920 27812 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:15:46,197 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:15:46,211 schema 24920 28288 Fetching tasks for project: 17
+INFO 2025-10-01 16:15:46,267 basehttp 24920 27812 "POST /graphql/ HTTP/1.1" 200 414
+INFO 2025-10-01 16:15:46,294 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 528
+INFO 2025-10-01 16:17:45,824 views 24920 28288 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:17:45,893 schema 24920 28288 Fetching projects for organization: demo-organization
+INFO 2025-10-01 16:17:45,933 basehttp 24920 28288 "POST /graphql/ HTTP/1.1" 200 515
+INFO 2025-10-01 16:20:07,195 views 24920 8928 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:07,364 basehttp 24920 8928 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 16:20:10,617 views 24920 8928 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:10,696 schema 24920 8928 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:20:10,724 basehttp 24920 8928 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:20:40,576 views 24920 8928 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:40,662 schema 24920 8928 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:20:40,696 basehttp 24920 8928 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:20:48,718 views 24920 8928 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:48,731 schema 24920 8928 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:20:48,822 basehttp 24920 8928 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 16:20:51,201 views 24920 8928 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:51,213 views 24920 27148 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:51,229 schema 24920 27148 Fetching tasks for project: 18
+INFO 2025-10-01 16:20:51,286 basehttp 24920 8928 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 16:20:51,306 basehttp 24920 27148 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 16:20:54,381 views 24920 27148 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:54,395 views 24920 8928 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:20:54,465 basehttp 24920 27148 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 16:20:54,468 basehttp 24920 8928 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 16:22:59,005 views 24920 28976 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:22:59,081 schema 24920 28976 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:22:59,105 basehttp 24920 28976 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:23:29,699 views 24920 28976 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:23:29,790 schema 24920 28976 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:23:29,817 basehttp 24920 28976 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:24:00,692 views 24920 28976 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:24:00,763 schema 24920 28976 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:24:00,789 basehttp 24920 28976 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:25:35,695 views 24920 28976 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:25:35,775 schema 24920 28976 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:25:35,799 basehttp 24920 28976 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:32:55,814 views 24920 20712 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:32:55,815 views 24920 23268 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:32:55,896 basehttp 24920 20712 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 16:32:55,897 basehttp 24920 23268 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 16:33:39,211 views 24920 23268 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:33:39,213 views 24920 20712 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:33:39,300 basehttp 24920 23268 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 16:33:39,301 basehttp 24920 20712 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 16:38:41,671 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:38:41,673 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:38:41,696 schema 24920 19440 Fetching tasks for project: 18
+INFO 2025-10-01 16:38:41,760 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 16:38:41,774 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 16:38:43,487 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:38:43,576 schema 24920 19440 Fetching projects for organization: demo-1
+INFO 2025-10-01 16:38:43,602 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 16:38:46,716 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:38:46,876 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 16:39:37,639 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:39:37,717 schema 24920 19440 Fetching projects for organization: demo-organization
+INFO 2025-10-01 16:39:37,749 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 515
+INFO 2025-10-01 16:40:09,171 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:40:09,251 schema 24920 19440 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 16:40:09,297 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 16:40:13,280 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:40:13,387 schema 24920 19440 Fetching projects for organization: trchorg
+INFO 2025-10-01 16:40:13,408 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 493
+INFO 2025-10-01 16:40:22,842 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:40:22,846 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:40:22,901 schema 24920 27768 Fetching tasks for project: 20
+INFO 2025-10-01 16:40:22,967 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 394
+INFO 2025-10-01 16:40:22,996 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 480
+INFO 2025-10-01 16:40:28,660 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:40:28,662 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:40:28,749 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 477
+INFO 2025-10-01 16:40:28,755 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 279
+INFO 2025-10-01 16:41:41,885 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:41:42,047 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 1935
+INFO 2025-10-01 16:43:16,717 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:43:16,789 schema 24920 19440 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 16:43:16,836 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 16:43:47,695 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:43:47,782 schema 24920 19440 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 16:43:47,826 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 16:44:25,338 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:44:25,490 schema 24920 19440 Created organization: New Org
+INFO 2025-10-01 16:44:25,509 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 412
+INFO 2025-10-01 16:44:25,640 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:44:25,837 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 2204
+INFO 2025-10-01 16:45:05,173 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:45:05,266 schema 24920 19440 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 16:45:05,323 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 16:45:12,771 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:45:12,804 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:45:12,892 schema 24920 27768 Fetching tasks for project: 2
+INFO 2025-10-01 16:45:12,958 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 461
+INFO 2025-10-01 16:45:13,056 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 1550
+INFO 2025-10-01 16:45:31,509 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:45:31,531 schema 24920 27768 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 16:45:31,683 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 916
+INFO 2025-10-01 16:46:02,922 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:46:03,026 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 515
+INFO 2025-10-01 16:46:03,236 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:46:03,265 schema 24920 27768 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 16:46:03,447 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 1308
+INFO 2025-10-01 16:46:07,156 views 24920 27768 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:46:07,194 views 24920 19440 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:46:07,213 schema 24920 19440 Fetching tasks for project: 21
+INFO 2025-10-01 16:46:07,299 basehttp 24920 27768 "POST /graphql/ HTTP/1.1" 200 412
+INFO 2025-10-01 16:46:07,320 basehttp 24920 19440 "POST /graphql/ HTTP/1.1" 200 21
+INFO 2025-10-01 16:52:23,621 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:52:23,676 schema 24920 29532 Created organization: New Org 2
+INFO 2025-10-01 16:52:23,707 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 416
+INFO 2025-10-01 16:52:23,851 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:52:24,065 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 2477
+INFO 2025-10-01 16:52:34,140 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:52:34,472 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:52:34,512 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 530
+INFO 2025-10-01 16:53:00,414 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:00,429 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:00,536 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:53:07,677 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:07,684 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:07,789 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:53:08,121 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:08,129 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:08,204 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 24
+INFO 2025-10-01 16:53:08,637 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:08,654 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:08,736 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 24
+INFO 2025-10-01 16:53:11,987 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:11,997 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:12,079 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:53:12,802 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:12,809 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:12,863 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 24
+INFO 2025-10-01 16:53:13,164 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:13,173 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:13,230 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 24
+INFO 2025-10-01 16:53:18,451 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:18,464 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:18,569 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:53:18,787 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:18,803 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:18,892 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:53:31,980 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:31,989 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:32,075 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:53:35,780 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:53:35,790 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:53:35,846 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 24
+INFO 2025-10-01 16:54:04,840 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:04,940 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 499
+INFO 2025-10-01 16:54:05,014 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:05,029 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:54:05,128 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 441
+INFO 2025-10-01 16:54:12,807 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:12,815 schema 24920 29532 Fetching projects for organization: startupxyz
+INFO 2025-10-01 16:54:12,899 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 817
+INFO 2025-10-01 16:54:22,189 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:22,282 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 438
+INFO 2025-10-01 16:54:22,287 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:22,305 schema 24920 29532 Fetching tasks for project: 3
+INFO 2025-10-01 16:54:22,426 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 1477
+INFO 2025-10-01 16:54:24,501 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:24,514 views 24920 17644 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:24,534 schema 24920 17644 Fetching tasks for project: 22
+INFO 2025-10-01 16:54:24,607 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 396
+INFO 2025-10-01 16:54:24,616 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 200 21
+INFO 2025-10-01 16:54:52,935 views 24920 17644 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:53,164 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 200 591
+INFO 2025-10-01 16:54:53,267 views 24920 17644 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:53,278 schema 24920 17644 Fetching tasks for project: 22
+INFO 2025-10-01 16:54:53,533 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 200 506
+INFO 2025-10-01 16:54:57,054 views 24920 17644 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:57,058 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:54:57,181 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 200 503
+INFO 2025-10-01 16:54:57,190 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 28
+INFO 2025-10-01 16:55:13,624 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:55:13,701 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 397
+INFO 2025-10-01 16:55:13,768 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:55:13,843 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 295
+INFO 2025-10-01 16:55:36,019 views 24920 29532 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:55:36,021 views 24920 17644 GraphQL request from 127.0.0.1
+INFO 2025-10-01 16:55:36,040 schema 24920 17644 Fetching tasks for project: 22
+INFO 2025-10-01 16:55:36,096 basehttp 24920 29532 "POST /graphql/ HTTP/1.1" 200 396
+INFO 2025-10-01 16:55:36,124 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 200 506
+WARNING 2025-10-01 16:55:53,441 log 24920 17644 Forbidden (Permission denied): /graphql/
+Traceback (most recent call last):
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-10-01 16:55:53,454 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 403 135
+WARNING 2025-10-01 16:55:53,733 log 24920 17644 Forbidden (Permission denied): /graphql/
+Traceback (most recent call last):
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-10-01 16:55:53,749 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 403 135
+WARNING 2025-10-01 16:55:53,822 log 24920 17644 Forbidden (Permission denied): /graphql/
+Traceback (most recent call last):
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-10-01 16:55:53,826 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 403 135
+WARNING 2025-10-01 16:55:55,945 log 24920 17644 Forbidden (Permission denied): /graphql/
+Traceback (most recent call last):
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-10-01 16:55:55,950 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 403 135
+WARNING 2025-10-01 16:55:56,039 log 24920 17644 Forbidden (Permission denied): /graphql/
+Traceback (most recent call last):
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-10-01 16:55:56,042 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 403 135
+WARNING 2025-10-01 16:55:56,278 log 24920 17644 Forbidden (Permission denied): /graphql/
+Traceback (most recent call last):
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Prakhar Maheshwari\AppData\Roaming\Python\Python313\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-10-01 16:55:56,284 basehttp 24920 17644 "POST /graphql/ HTTP/1.1" 403 135
+INFO 2025-10-01 17:17:06,418 autoreload 4896 8084 Watching for file changes with StatReloader

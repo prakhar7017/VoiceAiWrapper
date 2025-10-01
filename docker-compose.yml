@@ -22,47 +22,47 @@ services:
       - voiceai-network
 
   # Backend API
-  backend:
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: voiceai_backend
-    environment:
-      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/project_management
-      - DEBUG=0
-      - ALLOWED_HOSTS=localhost,127.0.0.1,backend
-    ports:
-      - "8000:8000"
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - ./backend:/app
-    networks:
-      - voiceai-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/admin/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+  # backend:
+  #   build: 
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   container_name: voiceai_backend
+  #   environment:
+  #     - DATABASE_URL=postgres://postgres:postgres@postgres:5432/project_management
+  #     - DEBUG=0
+  #     - ALLOWED_HOSTS=localhost,127.0.0.1,backend
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./backend:/app
+  #   networks:
+  #     - voiceai-network
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:8000/admin/"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
 
-  # Frontend
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: voiceai_frontend
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-    networks:
-      - voiceai-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+  # # Frontend
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   container_name: voiceai_frontend
+  #   ports:
+  #     - "3000:80"
+  #   depends_on:
+  #     - backend
+  #   networks:
+  #     - voiceai-network
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
 
   # Database Admin (Optional)
   pgadmin:

@@ -1,0 +1,25 @@
+# Core Django
+Django>=4.2,<5.0
+
+# GraphQL
+graphene-django>=3.0
+
+# PostgreSQL adapter
+psycopg2-binary>=2.9
+
+# Filtering support for GraphQL (optional but useful)
+django-filter>=23.0
+
+# CORS handling
+django-cors-headers>=4.0
+
+# Rate limiting and security
+django-ratelimit>=4.0
+django-environ>=0.10.0
+
+# Production server
+gunicorn>=21.0
+
+# Utilities / optional dev packages
+django-extensions>=3.3    # Useful for shell_plus, model graph
+pytest-django>=4.5         # Testing framework

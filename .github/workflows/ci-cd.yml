@@ -1,0 +1,132 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # Backend Tests and Build
+  backend:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: voiceai_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        
+    - name: Install dependencies
+      run: |
+        cd backend
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run migrations
+      run: |
+        cd backend
+        python manage.py migrate
+      env:
+        DATABASE_URL: postgres://postgres:postgres@localhost:5432/voiceai_test
+        
+    - name: Run tests
+      run: |
+        cd backend
+        python manage.py test
+      env:
+        DATABASE_URL: postgres://postgres:postgres@localhost:5432/voiceai_test
+        
+    - name: Build Docker image
+      if: github.ref == 'refs/heads/main'
+      run: |
+        cd backend
+        docker build -t voiceai-backend:latest .
+
+  # Frontend Tests and Build
+  frontend:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd frontend
+        npm ci
+        
+    - name: Run linting
+      run: |
+        cd frontend
+        npm run lint
+        
+    - name: Run type checking
+      run: |
+        cd frontend
+        npm run type-check
+        
+    - name: Run tests
+      run: |
+        cd frontend
+        npm run test
+        
+    - name: Build application
+      run: |
+        cd frontend
+        npm run build
+        
+    - name: Build Docker image
+      if: github.ref == 'refs/heads/main'
+      run: |
+        cd frontend
+        docker build -t voiceai-frontend:latest .
+
+  # Deploy (only on main branch)
+  deploy:
+    needs: [backend, frontend]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to staging
+      run: |
+        echo "🚀 Deploying to staging environment..."
+        echo "Backend and Frontend built successfully!"
+        echo "Ready for deployment to your preferred platform"
+        
+    # Uncomment and configure for actual deployment
+    # - name: Deploy to production
+    #   run: |
+    #     # Add your deployment commands here
+    #     # Examples: Deploy to Heroku, AWS, DigitalOcean, etc.

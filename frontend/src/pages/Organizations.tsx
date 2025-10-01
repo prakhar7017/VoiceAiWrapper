@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useOrganizations, useCreateOrganization } from '../hooks/useGraphQL';
 import { useAppStore } from '../store';
 import { cn } from '../lib/utils';
+import Particles from '../components/Particles';
 import type { Organization } from '../types';
 
 interface OrganizationCardProps {
@@ -19,24 +20,24 @@ function OrganizationCard({ organization, onSelect }: OrganizationCardProps) {
   return (
     <button
       onClick={handleClick}
-      className="w-full bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer text-left"
+      className="w-full modern-card hover:glow-hover transition-all duration-300 cursor-pointer text-left float"
       style={{ cursor: 'pointer' }}
     >
       <div className="flex items-center space-x-4">
-        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-          <span className="text-blue-600 font-semibold text-lg">
+        <div className="w-12 h-12 rounded-lg flex items-center justify-center glow-hover" style={{ background: 'var(--gradient-primary)' }}>
+          <span className="text-white font-semibold text-lg">
             {organization.name.charAt(0).toUpperCase()}
           </span>
         </div>
         <div className="flex-1">
-          <h3 className="text-lg font-medium text-gray-900">{organization.name}</h3>
-          <p className="text-sm text-gray-500">{organization.contactEmail}</p>
+          <h3 className="text-lg font-medium gradient-text">{organization.name}</h3>
+          <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{organization.contactEmail}</p>
         </div>
         <div className="text-right">
-          <div className="text-sm text-gray-500">
+          <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
             {organization.projectCount || 0} projects
           </div>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
             {organization.totalTasks || 0} tasks
           </div>
         </div>
@@ -63,33 +64,43 @@ function CreateOrganizationForm({ onSubmit, onCancel, loading }: CreateOrganizat
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-      <h3 className="text-lg font-medium text-gray-900 mb-4">Create New Organization</h3>
+    <div className="modern-card glow-hover">
+      <h3 className="text-lg font-medium gradient-text mb-4">Create New Organization</h3>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="name" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Organization Name
           </label>
           <input
             type="text"
             id="name"
             required
-            className="mt-1 form-input"
+            className="mt-1 w-full px-3 py-2 rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)'
+            }}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </div>
         
         <div>
-          <label htmlFor="contactEmail" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="contactEmail" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Contact Email
           </label>
           <input
             type="email"
             id="contactEmail"
             required
-            className="mt-1 form-input"
+            className="mt-1 w-full px-3 py-2 rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)'
+            }}
             value={formData.contactEmail}
             onChange={(e) => setFormData({ ...formData, contactEmail: e.target.value })}
           />
@@ -99,8 +110,13 @@ function CreateOrganizationForm({ onSubmit, onCancel, loading }: CreateOrganizat
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer"
-            style={{ cursor: 'pointer' }}
+            className="px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:glow-hover cursor-pointer"
+            style={{
+              color: 'var(--text-secondary)',
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              cursor: 'pointer'
+            }}
           >
             Cancel
           </button>
@@ -108,7 +124,7 @@ function CreateOrganizationForm({ onSubmit, onCancel, loading }: CreateOrganizat
             type="submit"
             disabled={loading}
             className={cn(
-              'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 cursor-pointer',
+              'btn-primary',
               loading && 'opacity-50 cursor-not-allowed'
             )}
             style={{ cursor: loading ? 'not-allowed' : 'pointer' }}
@@ -149,10 +165,22 @@ export function Organizations() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading organizations...</p>
+      <div className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
+        <div className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }}>
+          <Particles
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={300}
+            particleSpread={2}
+            speed={0.3}
+            particleBaseSize={20}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
+        <div className="text-center relative z-10">
+          <div className="animate-spin rounded-full h-12 w-12 mx-auto glow" style={{ border: '2px solid transparent', borderTop: '2px solid var(--accent-primary)' }}></div>
+          <p className="mt-4 gradient-text">Loading organizations...</p>
         </div>
       </div>
     );
@@ -160,12 +188,24 @@ export function Organizations() {
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-red-600 mb-4">Failed to load organizations</p>
+      <div className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
+        <div className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }}>
+          <Particles
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={300}
+            particleSpread={2}
+            speed={0.3}
+            particleBaseSize={20}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
+        <div className="text-center relative z-10">
+          <p className="mb-4" style={{ color: '#f5576c' }}>Failed to load organizations</p>
           <button
             onClick={() => refetch()}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            className="btn-primary glow-hover"
           >
             Retry
           </button>
@@ -175,14 +215,38 @@ export function Organizations() {
   }
 
   return (
-    <div className="organization-page min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Select Organization</h1>
-          <p className="mt-2 text-gray-600">
-            Choose an organization to manage projects and tasks
-          </p>
-        </div>
+    <div className="organization-page min-h-screen relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
+      {/* Particles Background */}
+      <div className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }}>
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={800}
+          particleSpread={2}
+          speed={1}
+          particleBaseSize={20}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
+
+      {/* Gradient Overlay */}
+      <div 
+        className="fixed inset-0 w-full h-full opacity-40"
+        style={{ 
+          background: 'radial-gradient(ellipse at center, transparent 0%, var(--bg-primary) 70%)',
+          zIndex: 1
+        }}
+      />
+
+      <div className="relative z-10 py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold gradient-text float">Select Organization</h1>
+            <p className="mt-2" style={{ color: 'var(--text-secondary)' }}>
+              Choose an organization to manage projects and tasks
+            </p>
+          </div>
 
         <div className="space-y-6">
           {/* Create Organization Form */}
@@ -213,7 +277,7 @@ export function Organizations() {
                   console.log('Create New Organization clicked');
                   setShowCreateForm(true);
                 }}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                className="btn-primary inline-flex items-center"
                 style={{ cursor: 'pointer' }}
               >
                 <span className="mr-2">+</span>
@@ -224,13 +288,13 @@ export function Organizations() {
 
           {organizations.length === 0 && !showCreateForm && (
             <div className="text-center py-12">
-              <p className="text-gray-500 mb-4">No organizations found</p>
+              <p className="mb-4" style={{ color: 'var(--text-muted)' }}>No organizations found</p>
               <button
                 onClick={() => {
                   console.log('Create Your First Organization clicked');
                   setShowCreateForm(true);
                 }}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                className="btn-primary inline-flex items-center pulse-glow"
                 style={{ cursor: 'pointer' }}
               >
                 <span className="mr-2">+</span>
@@ -238,6 +302,7 @@ export function Organizations() {
               </button>
             </div>
           )}
+        </div>
         </div>
       </div>
     </div>

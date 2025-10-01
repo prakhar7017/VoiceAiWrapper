@@ -13,29 +13,32 @@ interface StatsCardProps {
 }
 
 function StatsCard({ title, value, subtitle, icon, color = 'blue' }: StatsCardProps) {
-  const colorClasses = {
-    blue: 'bg-blue-50 text-blue-600',
-    green: 'bg-green-50 text-green-600',
-    yellow: 'bg-yellow-50 text-yellow-600',
-    red: 'bg-red-50 text-red-600',
+  const gradients = {
+    blue: 'var(--gradient-primary)',
+    green: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+    yellow: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+    red: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
   };
 
   return (
-    <div className="bg-white overflow-hidden shadow rounded-lg">
+    <div className="modern-card hover:glow-hover float">
       <div className="p-5">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-            <div className={`w-8 h-8 rounded-md flex items-center justify-center ${colorClasses[color as keyof typeof colorClasses]}`}>
-              <span className="text-lg">{icon}</span>
+            <div 
+              className="w-10 h-10 rounded-lg flex items-center justify-center glow-hover"
+              style={{ background: gradients[color as keyof typeof gradients] }}
+            >
+              <span className="text-lg text-white">{icon}</span>
             </div>
           </div>
           <div className="ml-5 w-0 flex-1">
             <dl>
-              <dt className="text-sm font-medium text-gray-500 truncate">{title}</dt>
-              <dd className="flex items-center text-lg font-medium text-gray-900">
+              <dt className="text-sm font-medium truncate" style={{ color: 'var(--text-secondary)' }}>{title}</dt>
+              <dd className="flex items-center text-xl font-bold gradient-text">
                 {value}
                 {subtitle && (
-                  <span className="text-sm text-gray-500 ml-1">{subtitle}</span>
+                  <span className="text-sm font-normal ml-1" style={{ color: 'var(--text-muted)' }}>{subtitle}</span>
                 )}
               </dd>
             </dl>
@@ -62,41 +65,41 @@ function ProjectCard({ project }: ProjectCardProps) {
     <Link
       to={`/projects/${project.id}`}
       onClick={handleClick}
-      className="project-card block bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
+      className="project-card block modern-card hover:glow-hover transition-all duration-300 cursor-pointer float"
       style={{ cursor: 'pointer', textDecoration: 'none', pointerEvents: 'auto' }}
     >
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-medium text-gray-900 truncate">{project.name}</h3>
+        <h3 className="text-lg font-medium gradient-text truncate">{project.name}</h3>
         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
           {project.status.replace('_', ' ')}
         </span>
       </div>
       
-      <p className="text-sm text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+      <p className="text-sm mb-4 line-clamp-2" style={{ color: 'var(--text-secondary)' }}>{project.description}</p>
       
       <div className="space-y-3">
         {/* Progress bar */}
         <div>
-          <div className="flex justify-between items-center text-sm text-gray-600 mb-1">
+          <div className="flex justify-between items-center text-sm mb-1" style={{ color: 'var(--text-secondary)' }}>
             <span>Progress</span>
-            <span>{progress}%</span>
+            <span className="gradient-text font-semibold">{progress}%</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full rounded-full h-2" style={{ background: 'var(--bg-tertiary)' }}>
             <div
-              className="bg-blue-600 h-2 rounded-full transition-all"
-              style={{ width: `${progress}%` }}
+              className="h-2 rounded-full transition-all glow"
+              style={{ width: `${progress}%`, background: 'var(--gradient-primary)' }}
             />
           </div>
         </div>
         
         {/* Stats */}
-        <div className="flex justify-between text-sm text-gray-600">
+        <div className="flex justify-between text-sm" style={{ color: 'var(--text-secondary)' }}>
           <span>{project.taskCount || 0} tasks</span>
           <span>{project.completedTasksCount || 0} completed</span>
         </div>
         
         {project.dueDate && (
-          <div className="text-sm text-gray-500">
+          <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
             Due: {formatDate(project.dueDate)}
           </div>
         )}
@@ -116,7 +119,7 @@ export function Dashboard() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 glow" style={{ border: '2px solid transparent', borderTop: '2px solid var(--accent-primary)' }}></div>
       </div>
     );
   }
@@ -124,7 +127,7 @@ export function Dashboard() {
   if (error) {
     return (
       <div className="text-center py-12">
-        <p className="text-red-600">Failed to load dashboard data</p>
+        <p style={{ color: '#f5576c' }}>Failed to load dashboard data</p>
       </div>
     );
   }
@@ -163,8 +166,8 @@ export function Dashboard() {
     <div className="dashboard-container space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-        <p className="mt-1 text-sm text-gray-500">
+        <h1 className="text-3xl font-bold gradient-text float">Dashboard</h1>
+        <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
           Welcome back! Here's what's happening with {selectedOrganization.name}.
         </p>
       </div>
@@ -186,12 +189,12 @@ export function Dashboard() {
       {/* Recent Projects */}
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium text-gray-900">Recent Projects</h2>
+          <h2 className="text-xl font-semibold gradient-text">Recent Projects</h2>
           <div>
           <Link
             to="/projects"
             onClick={() => console.log('View all projects clicked')}
-            className="text-sm font-medium text-blue-600 hover:text-blue-500 cursor-pointer"
+            className="text-sm font-medium gradient-text hover:glow-hover transition-all duration-200 cursor-pointer"
             style={{ cursor: 'pointer', textDecoration: 'none', pointerEvents: 'auto' }}
           >
             View all projects →
@@ -206,13 +209,13 @@ export function Dashboard() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
+          <div className="text-center py-12 modern-card">
             <div className="text-4xl mb-4">📁</div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No projects yet</h3>
-            <p className="text-gray-500 mb-4">Get started by creating your first project</p>
+            <h3 className="text-lg font-medium gradient-text mb-2">No projects yet</h3>
+            <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>Get started by creating your first project</p>
             <Link
               to="/projects"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="btn-primary inline-flex items-center pulse-glow"
             >
               Create Project
             </Link>
@@ -221,39 +224,42 @@ export function Dashboard() {
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-lg border border-gray-200 p-6">
-        <h2 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h2>
+      <div className="modern-card">
+        <h2 className="text-xl font-semibold gradient-text mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Link
             to="/projects"
-            className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex items-center p-4 rounded-lg transition-all duration-300 hover:glow-hover"
+            style={{ border: '1px solid var(--border-primary)', background: 'var(--bg-tertiary)' }}
           >
-            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-              <span className="text-blue-600 text-lg">📁</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-4" style={{ background: 'var(--gradient-primary)' }}>
+              <span className="text-white text-lg">📁</span>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-gray-900">Manage Projects</h3>
-              <p className="text-sm text-gray-500">View and organize projects</p>
+              <h3 className="text-sm font-medium gradient-text">Manage Projects</h3>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>View and organize projects</p>
             </div>
           </Link>
           
-          <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
-            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-              <span className="text-green-600 text-lg">📋</span>
+          <button className="flex items-center p-4 rounded-lg transition-all duration-300 hover:glow-hover text-left"
+            style={{ border: '1px solid var(--border-primary)', background: 'var(--bg-tertiary)' }}>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-4" style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)' }}>
+              <span className="text-white text-lg">📋</span>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-gray-900">View All Tasks</h3>
-              <p className="text-sm text-gray-500">See tasks across projects</p>
+              <h3 className="text-sm font-medium gradient-text">View All Tasks</h3>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>See tasks across projects</p>
             </div>
           </button>
           
-          <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-              <span className="text-purple-600 text-lg">📊</span>
+          <button className="flex items-center p-4 rounded-lg transition-all duration-300 hover:glow-hover text-left"
+            style={{ border: '1px solid var(--border-primary)', background: 'var(--bg-tertiary)' }}>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-4" style={{ background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)' }}>
+              <span className="text-white text-lg">📊</span>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-gray-900">View Reports</h3>
-              <p className="text-sm text-gray-500">Analyze project performance</p>
+              <h3 className="text-sm font-medium gradient-text">View Reports</h3>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Analyze project performance</p>
             </div>
           </button>
         </div>

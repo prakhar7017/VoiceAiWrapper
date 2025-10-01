@@ -13,10 +13,10 @@ function TaskCard({ task }: TaskCardProps) {
   return (
     <Link
       to={`/projects/${task.project.id}/tasks/${task.id}`}
-      className="block bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+      className="block modern-card hover:glow-hover transition-all duration-300 float"
     >
       <div className="flex items-start justify-between mb-3">
-        <h4 className="text-sm font-medium text-gray-900 flex-1">{task.title}</h4>
+        <h4 className="text-sm font-medium gradient-text flex-1">{task.title}</h4>
         <div className="flex space-x-2 ml-4">
           <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(task.priority)}`}>
             {task.priority}
@@ -28,10 +28,10 @@ function TaskCard({ task }: TaskCardProps) {
       </div>
 
       {task.description && (
-        <p className="text-sm text-gray-600 mb-3 line-clamp-2">{task.description}</p>
+        <p className="text-sm mb-3 line-clamp-2" style={{ color: 'var(--text-secondary)' }}>{task.description}</p>
       )}
 
-      <div className="flex items-center justify-between text-xs text-gray-500">
+      <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-muted)' }}>
         <div className="flex items-center space-x-4">
           {task.assigneeEmail && (
             <span>👤 {task.assigneeEmail}</span>
@@ -57,9 +57,9 @@ interface TaskColumnProps {
 
 function TaskColumn({ title, tasks, count, color }: TaskColumnProps) {
   return (
-    <div className="bg-gray-50 rounded-lg p-4">
+    <div className="modern-card" style={{ background: 'var(--bg-secondary)' }}>
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-medium text-gray-900">{title}</h3>
+        <h3 className="text-sm font-medium gradient-text">{title}</h3>
         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${color}`}>
           {count}
         </span>
@@ -72,7 +72,7 @@ function TaskColumn({ title, tasks, count, color }: TaskColumnProps) {
       </div>
 
       {tasks.length === 0 && (
-        <div className="text-center py-8 text-gray-500 text-sm">
+        <div className="text-center py-8 text-sm" style={{ color: 'var(--text-muted)' }}>
           No tasks
         </div>
       )}
@@ -111,7 +111,7 @@ export function Tasks() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 glow" style={{ border: '2px solid transparent', borderTop: '2px solid var(--accent-primary)' }}></div>
       </div>
     );
   }
@@ -119,7 +119,7 @@ export function Tasks() {
   if (error) {
     return (
       <div className="text-center py-12">
-        <p className="text-red-600">Failed to load tasks</p>
+        <p style={{ color: '#f5576c' }}>Failed to load tasks</p>
       </div>
     );
   }
@@ -138,10 +138,10 @@ export function Tasks() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Tasks</h1>
+          <h1 className="text-3xl font-bold gradient-text float">Tasks</h1>
           {project && (
-            <p className="mt-1 text-sm text-gray-500">
-              <Link to={`/projects/${project.id}`} className="text-blue-600 hover:text-blue-500">
+            <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
+              <Link to={`/projects/${project.id}`} className="gradient-text hover:glow-hover transition-all duration-200">
                 {project.name}
               </Link>
               {' '} • {tasks.length} tasks
@@ -151,24 +151,34 @@ export function Tasks() {
 
         <div className="flex items-center space-x-4">
           {/* View Mode Toggle */}
-          <div className="flex rounded-md shadow-sm">
+          <div className="flex rounded-md">
             <button
               onClick={() => setViewMode('board')}
-              className={`px-3 py-2 text-sm font-medium rounded-l-md border ${
+              className={`px-3 py-2 text-sm font-medium rounded-l-md transition-all duration-200 ${
                 viewMode === 'board'
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                  ? 'btn-primary'
+                  : 'hover:glow-hover'
               }`}
+              style={{
+                background: viewMode === 'board' ? 'var(--gradient-primary)' : 'var(--bg-tertiary)',
+                color: viewMode === 'board' ? 'white' : 'var(--text-secondary)',
+                border: '1px solid var(--border-primary)'
+              }}
             >
               Board
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`px-3 py-2 text-sm font-medium rounded-r-md border-t border-r border-b ${
+              className={`px-3 py-2 text-sm font-medium rounded-r-md transition-all duration-200 ${
                 viewMode === 'list'
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                  ? 'btn-primary'
+                  : 'hover:glow-hover'
               }`}
+              style={{
+                background: viewMode === 'list' ? 'var(--gradient-primary)' : 'var(--bg-tertiary)',
+                color: viewMode === 'list' ? 'white' : 'var(--text-secondary)',
+                border: '1px solid var(--border-primary)'
+              }}
             >
               List
             </button>
@@ -177,7 +187,7 @@ export function Tasks() {
       </div>
 
       {/* Filters */}
-      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+      <div className="modern-card">
         <div className="space-y-4">
           {/* Search Row */}
           <div className="flex flex-col sm:flex-row gap-4">
@@ -190,7 +200,12 @@ export function Tasks() {
               <input
                 type="text"
                 placeholder="Search tasks by title, description, assignee..."
-                className="w-full pl-10 pr-3 py-2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="w-full pl-10 pr-3 py-2 rounded-md transition-all duration-200 focus:glow"
+                style={{
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--border-primary)',
+                  color: 'var(--text-primary)'
+                }}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -210,9 +225,15 @@ export function Tasks() {
           {/* Filters Row */}
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="sm:w-40">
-              <label className="block text-xs font-medium text-gray-700 mb-1">Status</label>
+              <label className="block text-xs font-medium mb-1" style={{ color: 'var(--text-secondary)' }}>Status</label>
               <select
-                className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="w-full rounded-md transition-all duration-200 focus:glow"
+                style={{
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--border-primary)',
+                  color: 'var(--text-primary)',
+                  padding: '8px 12px'
+                }}
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value as TaskStatus | '')}
               >
@@ -225,9 +246,15 @@ export function Tasks() {
             </div>
 
             <div className="sm:w-40">
-              <label className="block text-xs font-medium text-gray-700 mb-1">Priority</label>
+              <label className="block text-xs font-medium mb-1" style={{ color: 'var(--text-secondary)' }}>Priority</label>
               <select
-                className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="w-full rounded-md transition-all duration-200 focus:glow"
+                style={{
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--border-primary)',
+                  color: 'var(--text-primary)',
+                  padding: '8px 12px'
+                }}
                 value={priorityFilter}
                 onChange={(e) => setPriorityFilter(e.target.value as TaskPriority | '')}
               >
@@ -242,8 +269,8 @@ export function Tasks() {
 
           {/* Clear Filters */}
           {(searchQuery || statusFilter || priorityFilter) && (
-            <div className="flex items-center justify-between pt-2 border-t border-gray-200">
-              <span className="text-sm text-gray-600">
+            <div className="flex items-center justify-between pt-2" style={{ borderTop: '1px solid var(--border-primary)' }}>
+              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
                 {tasks.length} task{tasks.length !== 1 ? 's' : ''} found
                 {searchQuery && ` for "${searchQuery}"`}
                 {statusFilter && ` with status "${statusFilter}"`}
@@ -255,7 +282,7 @@ export function Tasks() {
                   setStatusFilter('');
                   setPriorityFilter('');
                 }}
-                className="text-blue-600 hover:text-blue-500 text-sm"
+                className="gradient-text hover:glow-hover transition-all duration-200 text-sm"
               >
                 Clear all filters
               </button>
@@ -279,13 +306,13 @@ export function Tasks() {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-            <div className="px-6 py-4 border-b border-gray-200">
-              <h3 className="text-lg font-medium text-gray-900">All Tasks</h3>
+          <div className="modern-card">
+            <div className="px-6 py-4" style={{ borderBottom: '1px solid var(--border-primary)' }}>
+              <h3 className="text-lg font-medium gradient-text">All Tasks</h3>
             </div>
-            <div className="divide-y divide-gray-200">
-              {tasks.map((task) => (
-                <div key={task.id} className="p-6 hover:bg-gray-50">
+            <div style={{ borderColor: 'var(--border-primary)' }}>
+              {tasks.map((task, index) => (
+                <div key={task.id} className={`p-6 hover:glow-hover transition-all duration-200 ${index > 0 ? 'border-t' : ''}`} style={{ borderColor: 'var(--border-primary)' }}>
                   <TaskCard task={task} />
                 </div>
               ))}
@@ -293,20 +320,21 @@ export function Tasks() {
           </div>
         )
       ) : (
-        <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
+        <div className="text-center py-12 modern-card">
           <div className="text-4xl mb-4">📋</div>
-          <h3 className="text-lg font-medium text-gray-900 mb-2">
+          <h3 className="text-lg font-medium gradient-text mb-2">
             {searchQuery || statusFilter || priorityFilter ? 'No tasks found' : 'No tasks yet'}
           </h3>
-          <p className="text-gray-500 mb-4">
+          <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>
             {searchQuery || statusFilter || priorityFilter
               ? 'Try adjusting your search or filters'
-              : 'Tasks will appear here once they are created'}
+              : 'Tasks will appear here once they are created'
+            }
           </p>
           {project && (
             <Link
               to={`/projects/${project.id}`}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="btn-primary inline-flex items-center glow-hover"
             >
               ← Back to Project
             </Link>

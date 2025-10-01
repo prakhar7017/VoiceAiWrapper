@@ -15,12 +15,12 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       to={`/projects/${project.id}`}
-      className="block bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+      className="block modern-card hover:glow-hover transition-all duration-300 float"
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 mb-1">{project.name}</h3>
-          <p className="text-sm text-gray-600 line-clamp-2">{project.description}</p>
+          <h3 className="text-lg font-semibold gradient-text mb-1">{project.name}</h3>
+          <p className="text-sm line-clamp-2" style={{ color: 'var(--text-secondary)' }}>{project.description}</p>
         </div>
         <span className={`ml-4 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
           {project.status.replace('_', ' ')}
@@ -30,39 +30,39 @@ function ProjectCard({ project }: ProjectCardProps) {
       <div className="space-y-4">
         {/* Progress */}
         <div>
-          <div className="flex justify-between text-sm text-gray-600 mb-2">
+          <div className="flex justify-between text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>
             <span>Progress</span>
-            <span>{progress}%</span>
+            <span className="gradient-text font-semibold">{progress}%</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full rounded-full h-2" style={{ background: 'var(--bg-tertiary)' }}>
             <div
-              className="bg-blue-600 h-2 rounded-full transition-all"
-              style={{ width: `${progress}%` }}
+              className="h-2 rounded-full transition-all glow"
+              style={{ width: `${progress}%`, background: 'var(--gradient-primary)' }}
             />
           </div>
         </div>
         
         {/* Stats */}
         <div className="grid grid-cols-2 gap-4 text-sm">
-          <div className="text-center p-2 bg-gray-50 rounded">
-            <div className="font-semibold text-gray-900">{project.taskCount || 0}</div>
-            <div className="text-gray-500">Total Tasks</div>
+          <div className="text-center p-2 rounded" style={{ background: 'var(--bg-tertiary)' }}>
+            <div className="font-semibold gradient-text">{project.taskCount || 0}</div>
+            <div style={{ color: 'var(--text-muted)' }}>Total Tasks</div>
           </div>
-          <div className="text-center p-2 bg-gray-50 rounded">
-            <div className="font-semibold text-gray-900">{project.completedTasksCount || 0}</div>
-            <div className="text-gray-500">Completed</div>
+          <div className="text-center p-2 rounded" style={{ background: 'var(--bg-tertiary)' }}>
+            <div className="font-semibold gradient-text">{project.completedTasksCount || 0}</div>
+            <div style={{ color: 'var(--text-muted)' }}>Completed</div>
           </div>
         </div>
         
         {/* Due Date */}
         {project.dueDate && (
-          <div className="flex items-center text-sm text-gray-500">
+          <div className="flex items-center text-sm" style={{ color: 'var(--text-secondary)' }}>
             <span className="mr-1">📅</span>
             Due: {formatDate(project.dueDate)}
           </div>
         )}
         
-        <div className="text-xs text-gray-400">
+        <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
           Created {formatDate(project.createdAt)}
         </div>
       </div>
@@ -94,32 +94,44 @@ function CreateProjectForm({ onSubmit, onCancel, loading }: CreateProjectFormPro
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-      <h3 className="text-lg font-medium text-gray-900 mb-4">Create New Project</h3>
+    <div className="modern-card glow-hover">
+      <h3 className="text-lg font-medium gradient-text mb-4">Create New Project</h3>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="name" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Project Name *
           </label>
           <input
             type="text"
             id="name"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)',
+              padding: '8px 12px'
+            }}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </div>
         
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="description" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Description
           </label>
           <textarea
             id="description"
             rows={3}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)',
+              padding: '8px 12px'
+            }}
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
           />
@@ -127,12 +139,18 @@ function CreateProjectForm({ onSubmit, onCancel, loading }: CreateProjectFormPro
         
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label htmlFor="status" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="status" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
               Status
             </label>
             <select
               id="status"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+              style={{
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+                padding: '8px 12px'
+              }}
               value={formData.status}
               onChange={(e) => setFormData({ ...formData, status: e.target.value as ProjectStatus })}
             >
@@ -144,13 +162,19 @@ function CreateProjectForm({ onSubmit, onCancel, loading }: CreateProjectFormPro
           </div>
           
           <div>
-            <label htmlFor="dueDate" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="dueDate" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
               Due Date
             </label>
             <input
               type="date"
               id="dueDate"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+              style={{
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+                padding: '8px 12px'
+              }}
               value={formData.dueDate}
               onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
             />
@@ -161,7 +185,12 @@ function CreateProjectForm({ onSubmit, onCancel, loading }: CreateProjectFormPro
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+            className="px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:glow-hover"
+            style={{
+              color: 'var(--text-secondary)',
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)'
+            }}
           >
             Cancel
           </button>
@@ -169,7 +198,7 @@ function CreateProjectForm({ onSubmit, onCancel, loading }: CreateProjectFormPro
             type="submit"
             disabled={loading}
             className={cn(
-              'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700',
+              'btn-primary',
               loading && 'opacity-50 cursor-not-allowed'
             )}
           >
@@ -224,8 +253,8 @@ export function Projects() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Projects</h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <h1 className="text-3xl font-bold gradient-text float">Projects</h1>
+          <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
             Manage your projects and track progress
           </p>
         </div>
@@ -233,7 +262,7 @@ export function Projects() {
         {!showCreateForm && (
           <button
             onClick={() => setShowCreateForm(true)}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="btn-primary inline-flex items-center glow-hover"
           >
             <span className="mr-2">+</span>
             New Project
@@ -242,7 +271,7 @@ export function Projects() {
       </div>
 
       {/* Enhanced Filters */}
-      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+      <div className="modern-card">
         <div className="space-y-4">
           {/* Search and Status Row */}
           <div className="flex flex-col sm:flex-row gap-4">
@@ -255,7 +284,12 @@ export function Projects() {
               <input
                 type="text"
                 placeholder="Search projects by name, description..."
-                className="w-full pl-10 pr-3 py-2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="w-full pl-10 pr-3 py-2 rounded-md transition-all duration-200 focus:glow"
+                style={{
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--border-primary)',
+                  color: 'var(--text-primary)'
+                }}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -272,7 +306,13 @@ export function Projects() {
             </div>
             <div className="sm:w-48">
               <select
-                className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="w-full rounded-md transition-all duration-200 focus:glow"
+                style={{
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--border-primary)',
+                  color: 'var(--text-primary)',
+                  padding: '8px 12px'
+                }}
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value as ProjectStatus | '')}
               >
@@ -287,7 +327,7 @@ export function Projects() {
 
           {/* Search Results Info */}
           {(searchQuery || statusFilter) && (
-            <div className="flex items-center justify-between text-sm text-gray-600">
+            <div className="flex items-center justify-between text-sm" style={{ color: 'var(--text-secondary)' }}>
               <span>
                 {projects.length} project{projects.length !== 1 ? 's' : ''} found
                 {searchQuery && ` for "${searchQuery}"`}
@@ -298,7 +338,7 @@ export function Projects() {
                   setSearchQuery('');
                   setStatusFilter('');
                 }}
-                className="text-blue-600 hover:text-blue-500"
+                className="gradient-text hover:glow-hover transition-all duration-200"
               >
                 Clear filters
               </button>
@@ -319,14 +359,14 @@ export function Projects() {
       {/* Projects Grid */}
       {loading ? (
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 glow" style={{ border: '2px solid transparent', borderTop: '2px solid var(--accent-primary)' }}></div>
         </div>
       ) : error ? (
         <div className="text-center py-12">
-          <p className="text-red-600 mb-4">Failed to load projects</p>
+          <p className="mb-4" style={{ color: '#f5576c' }}>Failed to load projects</p>
           <button
             onClick={() => refetch()}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            className="btn-primary glow-hover"
           >
             Retry
           </button>
@@ -338,12 +378,12 @@ export function Projects() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
+        <div className="text-center py-12 modern-card">
           <div className="text-4xl mb-4">📁</div>
-          <h3 className="text-lg font-medium text-gray-900 mb-2">
+          <h3 className="text-lg font-medium gradient-text mb-2">
             {searchQuery || statusFilter ? 'No projects found' : 'No projects yet'}
           </h3>
-          <p className="text-gray-500 mb-4">
+          <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>
             {searchQuery || statusFilter 
               ? 'Try adjusting your search or filters'
               : 'Get started by creating your first project'
@@ -352,7 +392,7 @@ export function Projects() {
           {!searchQuery && !statusFilter && !showCreateForm && (
             <button
               onClick={() => setShowCreateForm(true)}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="btn-primary inline-flex items-center pulse-glow"
             >
               <span className="mr-2">+</span>
               Create Your First Project

@@ -13,18 +13,18 @@ function CommentItem({ comment }: CommentItemProps) {
   return (
     <div className="flex space-x-3">
       <div className="flex-shrink-0">
-        <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-          <span className="text-gray-600 text-sm font-medium">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: 'var(--bg-tertiary)' }}>
+          <span className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             {comment.authorEmail.charAt(0).toUpperCase()}
           </span>
         </div>
       </div>
       <div className="flex-1">
         <div className="flex items-center space-x-2">
-          <span className="text-sm font-medium text-gray-900">{comment.authorEmail}</span>
-          <span className="text-xs text-gray-500">{formatRelativeTime(comment.createdAt)}</span>
+          <span className="text-sm font-medium gradient-text">{comment.authorEmail}</span>
+          <span className="text-xs" style={{ color: 'var(--text-muted)' }}>{formatRelativeTime(comment.createdAt)}</span>
         </div>
-        <div className="mt-1 text-sm text-gray-700 whitespace-pre-wrap">{comment.content}</div>
+        <div className="mt-1 text-sm whitespace-pre-wrap" style={{ color: 'var(--text-secondary)' }}>{comment.content}</div>
       </div>
     </div>
   );
@@ -50,28 +50,40 @@ function CommentForm({ onSubmit, loading }: CommentFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="authorEmail" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="authorEmail" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
           Your Email
         </label>
         <input
           type="email"
           id="authorEmail"
           required
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+          style={{
+            background: 'var(--bg-tertiary)',
+            border: '1px solid var(--border-primary)',
+            color: 'var(--text-primary)',
+            padding: '8px 12px'
+          }}
           value={authorEmail}
           onChange={(e) => setAuthorEmail(e.target.value)}
           placeholder="your.email@example.com"
         />
       </div>
       <div>
-        <label htmlFor="content" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="content" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
           Comment
         </label>
         <textarea
           id="content"
           rows={3}
           required
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+          style={{
+            background: 'var(--bg-tertiary)',
+            border: '1px solid var(--border-primary)',
+            color: 'var(--text-primary)',
+            padding: '8px 12px'
+          }}
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Add a comment..."
@@ -82,7 +94,7 @@ function CommentForm({ onSubmit, loading }: CommentFormProps) {
           type="submit"
           disabled={loading || !content.trim() || !authorEmail.trim()}
           className={cn(
-            'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700',
+            'btn-primary',
             (loading || !content.trim() || !authorEmail.trim()) && 'opacity-50 cursor-not-allowed'
           )}
         >
@@ -120,32 +132,44 @@ function TaskEditForm({ task, onSubmit, onCancel, loading }: TaskEditFormProps) 
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-      <h3 className="text-lg font-medium text-gray-900 mb-4">Edit Task</h3>
+    <div className="modern-card">
+      <h3 className="text-lg font-medium gradient-text mb-4">Edit Task</h3>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="title" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Task Title *
           </label>
           <input
             type="text"
             id="title"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)',
+              padding: '8px 12px'
+            }}
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
           />
         </div>
         
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="description" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Description
           </label>
           <textarea
             id="description"
             rows={3}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)',
+              padding: '8px 12px'
+            }}
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
           />
@@ -356,56 +380,83 @@ export function TaskDetail() {
           loading={updatingTask}
         />
       ) : (
-        <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+        <div className="modern-card float">
           <div className="flex items-start justify-between mb-6">
             <div className="flex-1">
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">{task.title}</h1>
+              <h1 className="text-2xl font-bold gradient-text mb-2">{task.title}</h1>
               {task.description && (
-                <p className="text-gray-600 whitespace-pre-wrap">{task.description}</p>
+                <p className="whitespace-pre-wrap" style={{ color: 'var(--text-secondary)' }}>{task.description}</p>
               )}
             </div>
             <button
               onClick={() => setIsEditing(true)}
-              className="ml-4 px-3 py-1 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+              className="ml-4 px-3 py-1 text-sm font-medium rounded-md transition-all duration-200 hover:glow-hover"
+              style={{
+                color: 'var(--text-secondary)',
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)'
+              }}
             >
               Edit
             </button>
           </div>
           
           {/* Task Metadata */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div>
-              <dt className="text-sm font-medium text-gray-500">Status</dt>
-              <dd className="mt-1">
-                <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(task.status)}`}>
-                  {task.status.replace('_', ' ')}
-                </span>
-              </dd>
-            </div>
-            
-            <div>
-              <dt className="text-sm font-medium text-gray-500">Priority</dt>
-              <dd className="mt-1">
-                <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getPriorityColor(task.priority)}`}>
-                  {task.priority}
-                </span>
-              </dd>
-            </div>
-            
-            {task.assigneeEmail && (
-              <div>
-                <dt className="text-sm font-medium text-gray-500">Assignee</dt>
-                <dd className="mt-1 text-sm text-gray-900">{task.assigneeEmail}</dd>
-              </div>
-            )}
-            
-            {task.dueDate && (
-              <div>
-                <dt className="text-sm font-medium text-gray-500">Due Date</dt>
-                <dd className="mt-1 text-sm text-gray-900">{formatDate(task.dueDate)}</dd>
-              </div>
-            )}
-          </div>
+{/* Task Metadata */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+  {/* Status */}
+  <div>
+    <dt className="text-sm font-medium text-gray-500">Status</dt>
+    <dd className="mt-1">
+      <span
+        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(
+          task.status
+        )}`}
+      >
+        {task.status.replace("_", " ")}
+      </span>
+    </dd>
+  </div>
+
+  {/* Priority */}
+  <div>
+    <dt className="text-sm font-medium text-gray-500">Priority</dt>
+    <dd className="mt-1">
+      <span
+        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getPriorityColor(
+          task.priority
+        )}`}
+      >
+        {task.priority}
+      </span>
+    </dd>
+  </div>
+
+  {/* Assignee */}
+  {task.assigneeEmail && (
+    <div>
+      <dt className="text-sm font-medium text-gray-500">Assignee</dt>
+      <dd className="mt-1">
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+          {task.assigneeEmail}
+        </span>
+      </dd>
+    </div>
+  )}
+
+  {/* Due Date */}
+  {task.dueDate && (
+    <div>
+      <dt className="text-sm font-medium text-gray-500">Due Date</dt>
+      <dd className="mt-1">
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+          {formatDate(task.dueDate)}
+        </span>
+      </dd>
+    </div>
+  )}
+</div>
+
           
           {/* Task Info */}
           <div className="text-sm text-gray-500 border-t pt-4">
@@ -418,8 +469,8 @@ export function TaskDetail() {
       )}
 
       {/* Comments Section */}
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-        <h2 className="text-lg font-medium text-gray-900 mb-4">
+      <div className="modern-card">
+        <h2 className="text-lg font-medium gradient-text mb-4">
           Comments ({comments.length})
         </h2>
         
@@ -431,7 +482,7 @@ export function TaskDetail() {
         {/* Comments List */}
         {commentsLoading ? (
           <div className="flex items-center justify-center h-32">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <div className="animate-spin rounded-full h-8 w-8 glow" style={{ border: '2px solid transparent', borderTop: '2px solid var(--accent-primary)' }}></div>
           </div>
         ) : comments.length > 0 ? (
           <div className="space-y-6">
@@ -440,7 +491,7 @@ export function TaskDetail() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-8 text-gray-500">
+          <div className="text-center py-8" style={{ color: 'var(--text-muted)' }}>
             <p>No comments yet</p>
             <p className="text-sm">Be the first to add a comment!</p>
           </div>

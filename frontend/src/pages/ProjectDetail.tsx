@@ -13,10 +13,10 @@ function TaskCard({ task }: TaskCardProps) {
   return (
     <Link
       to={`/projects/${task.project.id}/tasks/${task.id}`}
-      className="block bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+      className="block modern-card hover:glow-hover transition-all duration-300 float"
     >
       <div className="flex items-start justify-between mb-3">
-        <h4 className="text-sm font-medium text-gray-900 flex-1">{task.title}</h4>
+        <h4 className="text-sm font-medium gradient-text flex-1">{task.title}</h4>
         <div className="flex space-x-2 ml-4">
           <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(task.priority)}`}>
             {task.priority}
@@ -28,10 +28,10 @@ function TaskCard({ task }: TaskCardProps) {
       </div>
       
       {task.description && (
-        <p className="text-sm text-gray-600 mb-3 line-clamp-2">{task.description}</p>
+        <p className="text-sm mb-3 line-clamp-2" style={{ color: 'var(--text-secondary)' }}>{task.description}</p>
       )}
       
-      <div className="flex items-center justify-between text-xs text-gray-500">
+      <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-muted)' }}>
         <div className="flex items-center space-x-4">
           {task.assigneeEmail && (
             <span>👤 {task.assigneeEmail}</span>
@@ -75,32 +75,44 @@ function CreateTaskForm({onSubmit, onCancel, loading }: CreateTaskFormProps) {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-      <h3 className="text-lg font-medium text-gray-900 mb-4">Create New Task</h3>
+    <div className="modern-card">
+      <h3 className="text-lg font-medium gradient-text mb-4">Create New Task</h3>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="title" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Task Title *
           </label>
           <input
             type="text"
             id="title"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)',
+              padding: '8px 12px'
+            }}
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
           />
         </div>
         
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="description" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
             Description
           </label>
           <textarea
             id="description"
             rows={3}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)',
+              color: 'var(--text-primary)',
+              padding: '8px 12px'
+            }}
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
           />
@@ -108,12 +120,18 @@ function CreateTaskForm({onSubmit, onCancel, loading }: CreateTaskFormProps) {
         
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label htmlFor="status" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="status" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
               Status
             </label>
             <select
               id="status"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+              style={{
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+                padding: '8px 12px'
+              }}
               value={formData.status}
               onChange={(e) => setFormData({ ...formData, status: e.target.value as TaskStatus })}
             >
@@ -125,12 +143,18 @@ function CreateTaskForm({onSubmit, onCancel, loading }: CreateTaskFormProps) {
           </div>
           
           <div>
-            <label htmlFor="priority" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="priority" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
               Priority
             </label>
             <select
               id="priority"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+              style={{
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+                padding: '8px 12px'
+              }}
               value={formData.priority}
               onChange={(e) => setFormData({ ...formData, priority: e.target.value as TaskPriority })}
             >
@@ -144,26 +168,38 @@ function CreateTaskForm({onSubmit, onCancel, loading }: CreateTaskFormProps) {
         
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label htmlFor="assigneeEmail" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="assigneeEmail" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
               Assignee Email
             </label>
             <input
               type="email"
               id="assigneeEmail"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+              style={{
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+                padding: '8px 12px'
+              }}
               value={formData.assigneeEmail}
               onChange={(e) => setFormData({ ...formData, assigneeEmail: e.target.value })}
             />
           </div>
           
           <div>
-            <label htmlFor="dueDate" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="dueDate" className="block text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
               Due Date
             </label>
             <input
               type="datetime-local"
               id="dueDate"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md transition-all duration-200 focus:glow"
+              style={{
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+                padding: '8px 12px'
+              }}
               value={formData.dueDate}
               onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
             />
@@ -174,7 +210,12 @@ function CreateTaskForm({onSubmit, onCancel, loading }: CreateTaskFormProps) {
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+            className="px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:glow-hover"
+            style={{
+              color: 'var(--text-secondary)',
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-primary)'
+            }}
           >
             Cancel
           </button>
@@ -182,7 +223,7 @@ function CreateTaskForm({onSubmit, onCancel, loading }: CreateTaskFormProps) {
             type="submit"
             disabled={loading}
             className={cn(
-              'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700',
+              'btn-primary',
               loading && 'opacity-50 cursor-not-allowed'
             )}
           >
@@ -260,11 +301,11 @@ export function ProjectDetail() {
   return (
     <div className="space-y-6">
       {/* Project Header */}
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+      <div className="modern-card float">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">{project.name}</h1>
-            <p className="text-gray-600">{project.description}</p>
+            <h1 className="text-2xl font-bold gradient-text mb-2">{project.name}</h1>
+            <p style={{ color: 'var(--text-secondary)' }}>{project.description}</p>
           </div>
           <span className={`ml-4 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(project.status)}`}>
             {project.status.replace('_', ' ')}
@@ -273,40 +314,40 @@ export function ProjectDetail() {
         
         {/* Project Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <div className="text-center p-4 bg-gray-50 rounded-lg">
-            <div className="text-2xl font-bold text-gray-900">{project.taskCount || 0}</div>
-            <div className="text-sm text-gray-500">Total Tasks</div>
+          <div className="text-center p-4 rounded-lg" style={{ background: 'var(--bg-tertiary)' }}>
+            <div className="text-2xl font-bold gradient-text">{project.taskCount || 0}</div>
+            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Total Tasks</div>
           </div>
-          <div className="text-center p-4 bg-blue-50 rounded-lg">
-            <div className="text-2xl font-bold text-blue-600">{tasksByStatus.IN_PROGRESS || 0}</div>
-            <div className="text-sm text-gray-500">In Progress</div>
+          <div className="text-center p-4 rounded-lg" style={{ background: 'var(--bg-tertiary)' }}>
+            <div className="text-2xl font-bold" style={{ color: '#3b82f6' }}>{tasksByStatus.IN_PROGRESS || 0}</div>
+            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>In Progress</div>
           </div>
-          <div className="text-center p-4 bg-green-50 rounded-lg">
-            <div className="text-2xl font-bold text-green-600">{project.completedTasksCount || 0}</div>
-            <div className="text-sm text-gray-500">Completed</div>
+          <div className="text-center p-4 rounded-lg" style={{ background: 'var(--bg-tertiary)' }}>
+            <div className="text-2xl font-bold" style={{ color: '#10b981' }}>{project.completedTasksCount || 0}</div>
+            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Completed</div>
           </div>
-          <div className="text-center p-4 bg-yellow-50 rounded-lg">
-            <div className="text-2xl font-bold text-yellow-600">{progress}%</div>
-            <div className="text-sm text-gray-500">Progress</div>
+          <div className="text-center p-4 rounded-lg" style={{ background: 'var(--bg-tertiary)' }}>
+            <div className="text-2xl font-bold" style={{ color: '#f59e0b' }}>{progress}%</div>
+            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Progress</div>
           </div>
         </div>
         
         {/* Progress Bar */}
         <div className="mb-4">
-          <div className="flex justify-between text-sm text-gray-600 mb-2">
+          <div className="flex justify-between text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>
             <span>Overall Progress</span>
-            <span>{progress}%</span>
+            <span className="gradient-text font-semibold">{progress}%</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-3">
+          <div className="w-full rounded-full h-3" style={{ background: 'var(--bg-tertiary)' }}>
             <div
-              className="bg-blue-600 h-3 rounded-full transition-all"
-              style={{ width: `${progress}%` }}
+              className="h-3 rounded-full transition-all glow"
+              style={{ width: `${progress}%`, background: 'var(--gradient-primary)' }}
             />
           </div>
         </div>
         
         {/* Project Info */}
-        <div className="flex items-center justify-between text-sm text-gray-500">
+        <div className="flex items-center justify-between text-sm" style={{ color: 'var(--text-muted)' }}>
           <div className="flex items-center space-x-6">
             <span>Created {formatDate(project.createdAt)}</span>
             {project.dueDate && (
@@ -315,7 +356,7 @@ export function ProjectDetail() {
           </div>
           <Link
             to="/projects"
-            className="text-blue-600 hover:text-blue-500"
+            className="gradient-text hover:glow-hover transition-all duration-200"
           >
             ← Back to Projects
           </Link>
@@ -325,11 +366,11 @@ export function ProjectDetail() {
       {/* Tasks Section */}
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium text-gray-900">Tasks</h2>
+          <h2 className="text-xl font-semibold gradient-text">Tasks</h2>
           {!showCreateTask && (
             <button
               onClick={() => setShowCreateTask(true)}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="btn-primary inline-flex items-center glow-hover"
             >
               <span className="mr-2">+</span>
               New Task

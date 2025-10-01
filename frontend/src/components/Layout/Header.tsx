@@ -1,11 +1,10 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useSelectedOrganization } from '../../store';
 
 const breadcrumbMap: Record<string, string> = {
   '/dashboard': 'Dashboard',
   '/projects': 'Projects',
   '/organizations': 'Organizations',
-  '/organizations/new': 'Create Organization',
   '/organizations/:id': 'Organization',
   '/organizations/:id/projects': 'Projects',
   '/organizations/:id/projects/new': 'Create Project',
@@ -35,9 +34,15 @@ export function Header() {
       
       let name = breadcrumbMap[currentPath] || segment;
       
-      // Handle dynamic segments
+      // Handle dynamic segments - skip numeric IDs but keep meaningful segments
       if (segment.match(/^[0-9]+$/)) {
-        name = `#${segment}`;
+        // Skip numeric IDs in breadcrumbs to avoid showing #18, etc.
+        return;
+      }
+
+      // Special handling for project pages
+      if (segment === 'projects' && pathSegments.includes('projects')) {
+        name = 'Projects';
       }
 
       breadcrumbs.push({
@@ -53,7 +58,14 @@ export function Header() {
   const breadcrumbs = getBreadcrumbs();
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header 
+      className="glass backdrop-blur-md relative z-20"
+      style={{ 
+        background: 'rgba(26, 26, 26, 0.8)',
+        borderBottom: '1px solid var(--border-primary)',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
+      }}
+    >
       <div className="px-6 py-4">
         <nav className="flex" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-4">
@@ -62,7 +74,8 @@ export function Header() {
                 <div className="flex items-center">
                   {index > 0 && (
                     <svg
-                      className="flex-shrink-0 h-5 w-5 text-gray-400 mr-4"
+                      className="flex-shrink-0 h-5 w-5 mr-4"
+                      style={{ color: 'var(--text-muted)' }}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -74,14 +87,21 @@ export function Header() {
                     </svg>
                   )}
                   {breadcrumb.current ? (
-                    <span className="text-sm font-medium text-gray-900">
+                    <span 
+                      className="text-sm font-medium gradient-text"
+                      style={{ color: 'var(--text-primary)' }}
+                    >
                       {breadcrumb.name}
                     </span>
                   ) : (
                     <Link
                       to={breadcrumb.href}
-                      className="text-sm font-medium text-gray-500 hover:text-gray-700 cursor-pointer"
-                      style={{ cursor: 'pointer', textDecoration: 'none' }}
+                      className="text-sm font-medium cursor-pointer transition-all duration-200 hover:glow-hover"
+                      style={{ 
+                        cursor: 'pointer', 
+                        textDecoration: 'none',
+                        color: 'var(--text-secondary)'
+                      }}
                     >
                       {breadcrumb.name}
                     </Link>

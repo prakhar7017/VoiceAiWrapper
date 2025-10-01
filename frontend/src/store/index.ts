@@ -76,8 +76,7 @@ interface AppState {
   
   // Search Actions
   setSearchQuery: (query: string) => void;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setSearchFilters: (filters: Record<string, any>) => void;
+  setSearchFilters: (filters: Record<string, unknown>) => void;
   setSearchSort: (sortBy: string, sortOrder: 'asc' | 'desc') => void;
   setSearchPage: (page: number) => void;
   clearSearch: () => void;
@@ -311,7 +310,7 @@ export const useAppStore = create<AppState>()(
         },
         
         clearSearch: () => {
-          set(( ) => ({
+          set(() => ({
             search: { ...initialState.search }
           }));
         },
@@ -322,7 +321,7 @@ export const useAppStore = create<AppState>()(
         },
         
         resetUIState: () => {
-          set(( ) => ({
+          set(() => ({
             ui: { ...initialState.ui }
           }));
         },

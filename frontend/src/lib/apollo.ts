@@ -77,8 +77,7 @@ const cache = new InMemoryCache({
     Organization: {
       fields: {
         projects: {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          merge(_existing = [], incoming) {
+          merge(_, incoming) {
             return incoming;
           },
         },
@@ -87,8 +86,7 @@ const cache = new InMemoryCache({
     Project: {
       fields: {
         tasks: {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          merge(_existing = [], incoming) {
+          merge(_, incoming) {
             return incoming;
           },
         },
@@ -97,8 +95,7 @@ const cache = new InMemoryCache({
     Task: {
       fields: {
         comments: {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          merge(_existing = [], incoming) {
+          merge(_, incoming) {
             return incoming;
           },
         },
@@ -107,8 +104,7 @@ const cache = new InMemoryCache({
     Query: {
       fields: {
         organizations: {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          merge(_existing = [], incoming) {
+          merge(_, incoming) {
             return incoming;
           },
         },
@@ -129,17 +125,16 @@ const cache = new InMemoryCache({
             'priority',
             'search',
           ],
-          merge(_existing = [], incoming, { args }) {
+          merge(existing = [], incoming, { args }) {
             if (args?.offset && args.offset > 0) {
-              return [..._existing, ...incoming];
+              return [...existing, ...incoming];
             }
             return incoming;
           },
         },
         taskComments: {
           keyArgs: ['taskId', 'organizationSlug'],
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          merge(_existing = [], incoming) {
+          merge(_, incoming) {
             return incoming;
           },
         },
@@ -173,7 +168,7 @@ export const clearApolloCache = () => {
 };
 
 // Helper function to refetch all queries
-export const refetchAllQueries = () => {
+export const refetchAllQueries = (): void => {
   apolloClient.refetchQueries({
     include: 'active',
   });
@@ -184,7 +179,7 @@ export const updateCacheAfterMutation = (
   cache: ApolloCache<unknown>,
   queryToUpdate: DocumentNode,
   variables?: Record<string, unknown>
-) => {
+): void => {
   try {
     const existingData = cache.readQuery({
       query: queryToUpdate,
@@ -198,7 +193,7 @@ export const updateCacheAfterMutation = (
         data: existingData,
       });
     }
-  } catch (error) {
+  } catch (error: unknown) {
     console.warn('Cache update failed:', error);
   }
 };

@@ -95,7 +95,7 @@ function CommentForm({ onSubmit, loading }: CommentFormProps) {
 
 interface TaskEditFormProps {
   task: Task;
-  onSubmit: (data: unknown) => void;
+  onSubmit: (data: Record<string, unknown>) => void;
   onCancel: () => void;
   loading?: boolean;
 }
@@ -278,8 +278,7 @@ export function TaskDetail() {
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleUpdateTask = async (data: any) => {
+  const handleUpdateTask = async (data: Record<string, unknown>) => {
     if (!selectedOrganization || !taskId) return;
     
     try {

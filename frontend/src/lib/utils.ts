@@ -217,8 +217,7 @@ export const removeFromStorage = (key: string): void => {
 
 // Debounce utility
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -231,8 +230,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle utility
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -264,14 +262,15 @@ export const getErrorMessage = (error: unknown): string => {
   return 'An unknown error occurred';
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const isGraphQLError = (error: any): boolean => {
-  return error?.graphQLErrors?.length > 0;
+export const isGraphQLError = (error: unknown): boolean => {
+  return !!error && typeof error === 'object' && 'graphQLErrors' in error && 
+    Array.isArray((error as { graphQLErrors: unknown[] }).graphQLErrors) && 
+    (error as { graphQLErrors: unknown[] }).graphQLErrors.length > 0;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const isNetworkError = (error: any): boolean => {
-  return error?.networkError != null;
+export const isNetworkError = (error: unknown): boolean => {
+  return !!error && typeof error === 'object' && 'networkError' in error && 
+    (error as { networkError: unknown }).networkError != null;
 };
 
 // Progress calculation utilities

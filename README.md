@@ -144,20 +144,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔮 Future Enhancements
 
-### Short-term Roadmap
-
-- **Voice Command Integration**: Implement core voice control features using Web Speech API or a third-party service.
-- **Offline Support**: Add service workers for basic offline functionality.
-- **Enhanced Notifications**: Implement real-time notifications for project updates.
-
-### Mid-term Goals
-
 - **AI-Powered Task Suggestions**: Implement machine learning to suggest task prioritization.
 - **Team Collaboration Features**: Add commenting, @mentions, and shared workspaces.
 - **Mobile Applications**: Develop native mobile apps for iOS and Android.
-
-### Long-term Vision
-
 - **Advanced Analytics**: Provide insights into project progress and team productivity.
 - **Integration Ecosystem**: Build connectors for popular tools like Slack, GitHub, and Jira.
 - **Enterprise Features**: Implement SSO, role-based access control, and compliance reporting.

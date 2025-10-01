@@ -266,3 +266,4 @@ INFO 2025-10-01 15:11:05,058 basehttp 25920 13832 "POST /graphql/ HTTP/1.1" 200 
 INFO 2025-10-01 15:11:06,994 views 25920 26996 GraphQL request from 127.0.0.1
 INFO 2025-10-01 15:11:07,048 schema 25920 26996 Fetching projects for organization: techcorp-solutions
 INFO 2025-10-01 15:11:07,065 basehttp 25920 26996 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:14:51,472 autoreload 12888 6664 Watching for file changes with StatReloader

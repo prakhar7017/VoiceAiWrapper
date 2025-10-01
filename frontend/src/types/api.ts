@@ -1,7 +1,7 @@
 // GraphQL Query and Mutation types for Apollo Client
 
 // Query Variables
-export interface GetOrganizationsVariables {}
+export type GetOrganizationsVariables = unknown
 
 export interface GetOrganizationVariables {
   slug: string;
@@ -103,10 +103,10 @@ export interface GraphQLError {
     column: number;
   }>;
   path?: string[];
-  extensions?: Record<string, any>;
+  extensions?: Record<string, unknown>;
 }
 
-export interface GraphQLResponse<T = any> {
+export interface GraphQLResponse<T = unknown> {
   data?: T;
   errors?: GraphQLError[];
   loading?: boolean;
@@ -115,7 +115,7 @@ export interface GraphQLResponse<T = any> {
 
 // Apollo Client cache types
 export interface CacheConfig {
-  typePolicies: Record<string, any>;
+  typePolicies: Record<string, unknown>;
 }
 
 // HTTP Error types
@@ -151,7 +151,7 @@ export interface Connection<T> {
 }
 
 // Real-time subscription types
-export interface SubscriptionData<T = any> {
+export interface SubscriptionData<T = unknown> {
   data?: T;
   error?: GraphQLError;
 }

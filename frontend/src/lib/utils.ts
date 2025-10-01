@@ -216,6 +216,8 @@ export const removeFromStorage = (key: string): void => {
 };
 
 // Debounce utility
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -229,6 +231,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle utility
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -261,10 +264,12 @@ export const getErrorMessage = (error: unknown): string => {
   return 'An unknown error occurred';
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const isGraphQLError = (error: any): boolean => {
   return error?.graphQLErrors?.length > 0;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const isNetworkError = (error: any): boolean => {
   return error?.networkError != null;
 };

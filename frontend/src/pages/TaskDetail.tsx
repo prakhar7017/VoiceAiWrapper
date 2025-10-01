@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useTask, useTaskComments, useCreateTaskComment, useUpdateTask } from '../hooks/useGraphQL';
 import { useSelectedOrganization } from '../store';
 import { formatDate, formatRelativeTime, getStatusColor, getPriorityColor, cn } from '../lib/utils';
-import type { TaskStatus, TaskPriority, TaskComment } from '../types';
+import type { TaskStatus, TaskPriority, TaskComment, Task } from '../types';
 
 interface CommentItemProps {
   comment: TaskComment;
@@ -94,8 +94,8 @@ function CommentForm({ onSubmit, loading }: CommentFormProps) {
 }
 
 interface TaskEditFormProps {
-  task: any;
-  onSubmit: (data: any) => void;
+  task: Task;
+  onSubmit: (data: unknown) => void;
   onCancel: () => void;
   loading?: boolean;
 }
@@ -278,6 +278,7 @@ export function TaskDetail() {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleUpdateTask = async (data: any) => {
     if (!selectedOrganization || !taskId) return;
     

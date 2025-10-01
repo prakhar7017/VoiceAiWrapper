@@ -1,4 +1,11 @@
-import { ApolloClient, InMemoryCache, createHttpLink, from } from '@apollo/client';
+import {
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+  from,
+  ApolloCache,
+  type DocumentNode,
+} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { onError } from '@apollo/client/link/error';
 import { RetryLink } from '@apollo/client/link/retry';
@@ -11,20 +18,18 @@ const httpLink = createHttpLink({
 
 // Auth link (for future authentication)
 const authLink = setContext((_, { headers }) => {
-  // Get auth token from localStorage if needed
   const token = localStorage.getItem('authToken');
-  
   return {
     headers: {
       ...headers,
       authorization: token ? `Bearer ${token}` : '',
       'Content-Type': 'application/json',
-    }
+    },
   };
 });
 
 // Error handling link
-const errorLink = onError(({ graphQLErrors, networkError, operation, forward }) => {
+const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
     graphQLErrors.forEach(({ message, locations, path }) => {
       console.error(
@@ -35,21 +40,17 @@ const errorLink = onError(({ graphQLErrors, networkError, operation, forward }) 
 
   if (networkError) {
     console.error(`Network error: ${networkError}`);
-    
-    // Handle specific network errors
+
     if ('statusCode' in networkError) {
       switch (networkError.statusCode) {
         case 401:
-          // Handle unauthorized - redirect to login
           localStorage.removeItem('authToken');
           window.location.href = '/login';
           break;
         case 403:
-          // Handle forbidden
           console.error('Access forbidden');
           break;
         case 500:
-          // Handle server error
           console.error('Server error');
           break;
       }
@@ -66,7 +67,7 @@ const retryLink = new RetryLink({
   },
   attempts: {
     max: 3,
-    retryIf: (error, _operation) => !!error && !error.message.includes('401'),
+    retryIf: (error) => !!error && !error.message.includes('401'),
   },
 });
 
@@ -76,7 +77,8 @@ const cache = new InMemoryCache({
     Organization: {
       fields: {
         projects: {
-          merge(existing = [], incoming) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          merge(_existing = [], incoming) {
             return incoming;
           },
         },
@@ -85,7 +87,8 @@ const cache = new InMemoryCache({
     Project: {
       fields: {
         tasks: {
-          merge(existing = [], incoming) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          merge(_existing = [], incoming) {
             return incoming;
           },
         },
@@ -94,7 +97,8 @@ const cache = new InMemoryCache({
     Task: {
       fields: {
         comments: {
-          merge(existing = [], incoming) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          merge(_existing = [], incoming) {
             return incoming;
           },
         },
@@ -103,33 +107,39 @@ const cache = new InMemoryCache({
     Query: {
       fields: {
         organizations: {
-          merge(existing = [], incoming) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          merge(_existing = [], incoming) {
             return incoming;
           },
         },
         projects: {
           keyArgs: ['organizationSlug', 'status', 'search'],
-          merge(existing = [], incoming, { args }) {
-            // Handle pagination
+          merge(_existing = [], incoming, { args }) {
             if (args?.offset && args.offset > 0) {
-              return [...existing, ...incoming];
+              return [..._existing, ...incoming];
             }
             return incoming;
           },
         },
         tasks: {
-          keyArgs: ['projectId', 'organizationSlug', 'status', 'priority', 'search'],
-          merge(existing = [], incoming, { args }) {
-            // Handle pagination
+          keyArgs: [
+            'projectId',
+            'organizationSlug',
+            'status',
+            'priority',
+            'search',
+          ],
+          merge(_existing = [], incoming, { args }) {
             if (args?.offset && args.offset > 0) {
-              return [...existing, ...incoming];
+              return [..._existing, ...incoming];
             }
             return incoming;
           },
         },
         taskComments: {
           keyArgs: ['taskId', 'organizationSlug'],
-          merge(existing = [], incoming) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          merge(_existing = [], incoming) {
             return incoming;
           },
         },
@@ -171,10 +181,9 @@ export const refetchAllQueries = () => {
 
 // Helper function to update cache after mutations
 export const updateCacheAfterMutation = (
-  cache: any,
-  mutationResult: any,
-  queryToUpdate: string,
-  variables?: any
+  cache: ApolloCache<unknown>,
+  queryToUpdate: DocumentNode,
+  variables?: Record<string, unknown>
 ) => {
   try {
     const existingData = cache.readQuery({
@@ -183,7 +192,6 @@ export const updateCacheAfterMutation = (
     });
 
     if (existingData) {
-      // Update logic would go here based on mutation type
       cache.writeQuery({
         query: queryToUpdate,
         variables,

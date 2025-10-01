@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useSelectedOrganization, useAppStore } from '../../store';
+import { useSelectedOrganization } from '../../store';
 
 const breadcrumbMap: Record<string, string> = {
   '/dashboard': 'Dashboard',

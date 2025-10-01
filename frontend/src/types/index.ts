@@ -128,7 +128,7 @@ export interface TaskFilters {
 }
 
 // API Response types
-export interface MutationResponse<T = any> {
+export interface MutationResponse<T = unknown> {
   success: boolean;
   message: string;
   data?: T;
@@ -173,7 +173,7 @@ export interface ValidationError {
   message: string;
 }
 
-export interface FormState<T = any> {
+export interface FormState<T = unknown> {
   data: T;
   errors: ValidationError[];
   isSubmitting: boolean;
@@ -218,7 +218,7 @@ export interface UIPreferences {
 // Search and filter state
 export interface SearchState {
   query: string;
-  filters: Record<string, any>;
+  filters: Record<string, unknown>;
   sortBy: string;
   sortOrder: 'asc' | 'desc';
   page: number;

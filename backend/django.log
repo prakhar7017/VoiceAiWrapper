@@ -1,0 +1,268 @@
+INFO 2025-10-01 14:41:13,195 autoreload 25920 6876 Watching for file changes with StatReloader
+INFO 2025-10-01 14:41:13,560 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:41:13,612 schema 25920 28200 Fetching projects for organization: prakhar
+INFO 2025-10-01 14:41:13,640 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 1629
+INFO 2025-10-01 14:41:35,164 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:41:35,216 schema 25920 28200 Fetching projects for organization: prakhar
+INFO 2025-10-01 14:41:35,253 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 1629
+INFO 2025-10-01 14:41:40,136 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:41:40,173 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 843
+INFO 2025-10-01 14:41:41,904 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:41:41,948 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 843
+INFO 2025-10-01 14:46:35,508 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:46:35,559 schema 25920 28200 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:46:35,588 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:46:55,228 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:46:55,272 schema 25920 28200 Created organization: Demo Organization
+INFO 2025-10-01 14:46:55,286 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 432
+INFO 2025-10-01 14:46:55,330 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:46:55,396 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 1132
+INFO 2025-10-01 14:47:00,305 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:47:00,349 schema 25920 28200 Fetching projects for organization: demo-organization
+INFO 2025-10-01 14:47:00,354 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 234
+INFO 2025-10-01 14:47:46,012 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:47:46,070 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 517
+INFO 2025-10-01 14:47:46,118 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:47:46,122 schema 25920 28200 Fetching projects for organization: demo-organization
+INFO 2025-10-01 14:47:46,159 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 417
+INFO 2025-10-01 14:47:54,206 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:47:54,266 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 414
+INFO 2025-10-01 14:47:54,268 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:47:54,275 schema 25920 28200 Fetching tasks for project: 17
+INFO 2025-10-01 14:47:54,313 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 21
+INFO 2025-10-01 14:48:40,435 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:48:40,504 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 613
+INFO 2025-10-01 14:48:40,544 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:48:40,549 schema 25920 28200 Fetching tasks for project: 17
+INFO 2025-10-01 14:48:40,584 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 528
+INFO 2025-10-01 14:48:43,747 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:48:43,749 views 25920 16364 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:48:43,808 basehttp 25920 16364 "POST /graphql/ HTTP/1.1" 200 28
+INFO 2025-10-01 14:48:43,829 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 525
+INFO 2025-10-01 14:49:07,268 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:07,314 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 406
+INFO 2025-10-01 14:49:07,339 views 25920 28200 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:07,374 basehttp 25920 28200 "POST /graphql/ HTTP/1.1" 200 304
+INFO 2025-10-01 14:49:27,845 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:27,909 schema 25920 21408 Fetching projects for organization: demo-organization
+INFO 2025-10-01 14:49:27,930 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 515
+INFO 2025-10-01 14:49:35,732 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:35,736 schema 25920 21408 Fetching projects for organization: demo-organization
+INFO 2025-10-01 14:49:35,776 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 417
+INFO 2025-10-01 14:49:38,431 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:38,496 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 1132
+INFO 2025-10-01 14:49:45,389 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:45,441 schema 25920 21408 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:49:45,460 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:49:56,338 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:49:56,342 schema 25920 21408 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:49:56,405 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 916
+INFO 2025-10-01 14:50:27,692 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:50:27,740 schema 25920 21408 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:50:27,759 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:50:58,699 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:50:58,747 schema 25920 21408 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:50:58,772 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:51:29,694 views 25920 21408 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:51:29,741 schema 25920 21408 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:51:29,758 basehttp 25920 21408 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:52:01,007 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:52:01,059 schema 25920 5384 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:52:01,075 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:52:57,687 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:52:57,738 schema 25920 5384 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:52:57,758 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:53:28,684 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:53:28,731 schema 25920 5384 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:53:28,747 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:53:59,693 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:53:59,722 schema 25920 5384 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:53:59,737 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:54:30,998 basehttp 25920 17864 "OPTIONS /graphql/ HTTP/1.1" 200 0
+INFO 2025-10-01 14:54:31,026 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:54:31,062 schema 25920 5384 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:54:31,081 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:55:01,696 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:55:01,741 schema 25920 5384 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 14:55:01,759 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 14:59:11,789 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:59:11,839 schema 25920 5384 Created organization: Demo 1
+INFO 2025-10-01 14:59:11,849 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 410
+INFO 2025-10-01 14:59:11,892 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:59:11,955 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 1399
+INFO 2025-10-01 14:59:18,584 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 14:59:18,653 schema 25920 5384 Fetching projects for organization: demo-1
+INFO 2025-10-01 14:59:18,665 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 212
+INFO 2025-10-01 15:00:12,095 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:12,153 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 483
+INFO 2025-10-01 15:00:12,199 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:12,202 schema 25920 5384 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:00:12,269 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:00:22,433 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:22,504 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:00:22,511 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:22,523 schema 25920 5384 Fetching tasks for project: 18
+INFO 2025-10-01 15:00:22,588 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 21
+INFO 2025-10-01 15:00:54,548 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:54,605 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 576
+INFO 2025-10-01 15:00:54,647 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:54,652 schema 25920 5384 Fetching tasks for project: 18
+INFO 2025-10-01 15:00:54,704 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:00:56,598 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:56,599 views 25920 17372 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:00:56,669 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 488
+INFO 2025-10-01 15:00:56,669 basehttp 25920 17372 "POST /graphql/ HTTP/1.1" 200 28
+INFO 2025-10-01 15:01:25,388 views 25920 17372 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:25,442 basehttp 25920 17372 "POST /graphql/ HTTP/1.1" 200 394
+INFO 2025-10-01 15:01:25,471 views 25920 17372 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:25,518 basehttp 25920 17372 "POST /graphql/ HTTP/1.1" 200 292
+INFO 2025-10-01 15:01:44,456 views 25920 17372 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:44,457 views 25920 5384 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:44,481 schema 25920 5384 Fetching tasks for project: 18
+INFO 2025-10-01 15:01:44,526 basehttp 25920 17372 "POST /graphql/ HTTP/1.1" 200 380
+INFO 2025-10-01 15:01:44,549 basehttp 25920 5384 "POST /graphql/ HTTP/1.1" 200 491
+INFO 2025-10-01 15:01:54,456 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:54,461 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:01:54,520 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:01:57,088 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:57,092 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:01:57,146 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:01:57,216 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:57,220 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:01:57,275 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:01:57,821 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:57,828 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:01:57,886 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:01:57,942 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:57,949 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:01:57,999 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:01:58,383 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:01:58,387 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:01:58,439 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:02:05,685 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:02:05,694 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:02:05,755 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 383
+INFO 2025-10-01 15:02:09,141 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:02:09,156 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:02:09,206 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 24
+INFO 2025-10-01 15:02:13,173 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:02:13,234 schema 25920 10784 Fetching projects for organization: demo-1
+INFO 2025-10-01 15:02:13,259 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:02:16,350 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:02:16,417 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 1399
+INFO 2025-10-01 15:02:18,445 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:02:18,502 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:02:18,528 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:02:48,693 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:02:48,721 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:02:48,736 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:03:19,718 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:03:19,772 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:03:19,806 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:03:50,699 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:03:50,742 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:03:50,773 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:04:21,693 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:04:21,757 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:04:21,795 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+    INFO 2025-10-01 15:04:41,264 basehttp 25920 11964 "OPTIONS /graphql/ HTTP/1.1" 200 0
+INFO 2025-10-01 15:04:41,577 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:04:41,654 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 1399
+INFO 2025-10-01 15:04:52,699 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:04:52,739 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:04:52,763 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:05:23,696 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:05:23,732 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:05:23,751 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:05:51,858 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:05:51,897 schema 25920 27104 Created organization: Dummy 2
+INFO 2025-10-01 15:05:51,909 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 412
+INFO 2025-10-01 15:05:51,987 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:05:52,074 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 1668
+INFO 2025-10-01 15:05:54,698 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:05:54,749 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:05:54,769 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:05:58,768 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:05:58,841 schema 25920 27104 Fetching projects for organization: dummy-2
+INFO 2025-10-01 15:05:58,854 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 214
+INFO 2025-10-01 15:06:25,707 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:06:25,760 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:06:25,778 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:06:35,192 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:06:35,224 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 487
+INFO 2025-10-01 15:06:35,272 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:06:35,275 schema 25920 27104 Fetching projects for organization: dummy-2
+INFO 2025-10-01 15:06:35,330 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 387
+INFO 2025-10-01 15:06:42,008 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:06:42,067 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 384
+INFO 2025-10-01 15:06:42,070 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:06:42,080 schema 25920 27104 Fetching tasks for project: 19
+INFO 2025-10-01 15:06:42,119 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 21
+INFO 2025-10-01 15:06:56,703 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:06:56,744 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:06:56,763 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:07:16,926 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:16,967 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 566
+INFO 2025-10-01 15:07:17,043 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:17,050 schema 25920 27104 Fetching tasks for project: 19
+INFO 2025-10-01 15:07:17,101 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 481
+INFO 2025-10-01 15:07:19,462 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:19,477 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:19,544 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 478
+INFO 2025-10-01 15:07:19,563 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 28
+INFO 2025-10-01 15:07:27,703 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:27,759 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:07:27,781 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:07:46,090 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:46,142 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 398
+INFO 2025-10-01 15:07:46,164 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:46,193 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 296
+INFO 2025-10-01 15:07:58,720 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:58,802 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:07:58,850 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:07:59,551 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:07:59,603 schema 25920 15960 Fetching projects for organization: dummy-2
+INFO 2025-10-01 15:07:59,622 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 485
+INFO 2025-10-01 15:08:10,567 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:08:10,649 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 1668
+INFO 2025-10-01 15:08:16,488 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:08:16,565 schema 25920 15960 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:08:16,613 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:08:24,228 views 25920 15960 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:08:24,234 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:08:24,243 schema 25920 27104 Fetching tasks for project: 2
+INFO 2025-10-01 15:08:24,284 basehttp 25920 15960 "POST /graphql/ HTTP/1.1" 200 461
+INFO 2025-10-01 15:08:24,312 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 1550
+INFO 2025-10-01 15:08:29,706 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:08:29,758 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:08:29,786 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:09:00,700 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:09:00,736 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:09:00,753 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:09:02,704 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:09:02,756 schema 25920 27104 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:09:02,771 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:09:31,694 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:09:31,723 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:09:31,738 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:09:33,717 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:09:33,768 schema 25920 27104 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:09:33,805 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:10:02,747 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:10:02,802 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:10:02,852 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:10:04,710 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:10:04,784 schema 25920 27104 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:10:04,817 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:10:33,688 views 25920 10784 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:10:33,724 schema 25920 10784 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:10:33,742 basehttp 25920 10784 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:10:35,684 views 25920 27104 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:10:35,724 schema 25920 27104 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:10:35,754 basehttp 25920 27104 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:11:04,993 views 25920 13832 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:11:05,043 schema 25920 13832 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:11:05,058 basehttp 25920 13832 "POST /graphql/ HTTP/1.1" 200 889
+INFO 2025-10-01 15:11:06,994 views 25920 26996 GraphQL request from 127.0.0.1
+INFO 2025-10-01 15:11:07,048 schema 25920 26996 Fetching projects for organization: techcorp-solutions
+INFO 2025-10-01 15:11:07,065 basehttp 25920 26996 "POST /graphql/ HTTP/1.1" 200 889

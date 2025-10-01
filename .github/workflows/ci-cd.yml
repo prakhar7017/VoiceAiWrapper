@@ -57,6 +57,7 @@ jobs:
         python scripts/ensure_db.py
       env:
         DATABASE_URL: postgres://postgres:postgres@localhost:5432/project_management
+        DJANGO_SETTINGS_MODULE: config.settings
         
     - name: Run migrations
       run: |
@@ -64,6 +65,7 @@ jobs:
         python manage.py migrate
       env:
         DATABASE_URL: postgres://postgres:postgres@localhost:5432/project_management
+        DJANGO_SETTINGS_MODULE: config.settings
         
     - name: Run tests
       run: |
@@ -71,6 +73,7 @@ jobs:
         python manage.py test
       env:
         DATABASE_URL: postgres://postgres:postgres@localhost:5432/project_management
+        DJANGO_SETTINGS_MODULE: config.settings
         
     - name: Build Docker image
       if: github.ref == 'refs/heads/main'
